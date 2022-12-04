@@ -1,0 +1,68 @@
+{% extends './master_template_crm.html' %}
+{%load static%}
+{% block title%}
+Admin
+{%endblock%}
+{% block content%}
+
+<style>
+    /* admin page */
+    .addButton {
+        background-color: white;
+        margin: 20px 10px 20px 10px;
+        border: 1px solid rgb(237, 237, 253);
+    }
+
+    .plusIcon {
+        font-size: 24px;
+        padding-right: 10px;
+    }
+</style>
+
+<div class="row">
+    <button class="btn addButton"><span class="plusIcon">+</span>Add Student</button>
+    <button class="btn addButton"><span class="plusIcon">+</span>Add Employee</button>
+</div><br>
+
+<div class="row" style="width: 100%;" id="schoolAdminDiv">
+    <div style="width: 21%;" class="adminCard">
+        <div class="row m-auto">
+            <div style="width: 70%;">
+                <p class="cardPara">Total Registered Members</p>
+                <p class="cardGreenText">14K</p>
+            </div>
+            <div style="width: 30%;"><img class="reloadImg" src="{% static './images/reload.png'%} "></div>
+        </div>
+    </div>
+    <div style="width: 21%;" class="adminCard">
+        <div class="row m-auto">
+            <div style="width: 70%;">
+                <p class="cardPara">Pending Approvals</p><br>
+                <p class="cardRedText">10</p>
+            </div>
+            <div style="width: 30%;"><img class="reloadImg" src="{% static './images/reload.png'%} "></div>
+        </div>
+    </div>
+    <div style="width: 21%;" class="adminCard">
+        <div class="row m-auto">
+            <div style="width: 70%;">
+                <p class="cardPara">Total Camps Conducted</p>
+                <p class="cardGreenText">14</p>
+            </div>
+            <div style="width: 30%;"><img class="reloadImg" src="{% static './images/reload.png'%} "></div>
+        </div>
+    </div>
+    
+    <div style="width: 21%;" class="adminCard">
+        <div class="row m-auto">
+            <div style="width: 70%;">
+                <p class="cardPara">Upcoming Camps</p><br>
+                <p class="cardGoldText">14</p>
+            </div>
+            <div style="width: 30%;"><img class="reloadImg" src="{% static './images/reload.png'%} "></div>
+        </div>
+    </div>
+
+</div>
+
+{%endblock%}

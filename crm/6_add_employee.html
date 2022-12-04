@@ -1,0 +1,169 @@
+{% extends './master_template_crm.html' %}
+{%load static%}
+{% block title%}
+Admin
+{%endblock%}
+{% block content%}
+<p class="topHeading" style="margin-bottom: 20px;">Registered members/Add Employee</p>
+<div class="rightInnerDiv m-auto" style="width: 100%;">
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>SCHOOL</label>
+        </div>
+        <div style="width:82%">
+            <select style="width: 100%;" required>
+                <option value="Little Flower Public school">Little Flower Public school</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row m-auto">
+        <div style="width:15%">
+            <label for="">APPLICATION NO</label>
+        </div>
+        <div style="width:30%">
+            <span>001121345</span>
+        </div>
+        <div style="width:15%">
+            <label for=""> ACEDAMIC YEAR</label>
+        </div>
+        <div style="width:35%">
+            <span>2022 - 2023</span>
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>ID PROOF NUMBER</label>
+        </div>
+        <div style="width:82%">
+            <input style="width: 100%;" type="text" placeholder="0023 4567 1223">
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>EMPLOYEE NAME</label>
+        </div>
+        <div style="width:82%">
+            <input style="width: 100%;" type="text" placeholder="Swecha">
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>S/O OR D/O</label>
+        </div>
+        <div style="width:82%">
+            <input style="width: 100%;" type="text" placeholder="Prasad">
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width:15%">
+            <label for=""> GENDER</label>
+        </div>
+        <div style="width:30%">
+            <input style="width: 100%;" type="text" placeholder="Female">
+        </div>
+        <div style="width:17%">
+            <label for=""> BLOOD GROUP</label>
+        </div>
+        <div style="width:35%">
+            <input style="width: 100%;" type="text" placeholder="O+">
+        </div>
+    </div>
+
+    <div class="row m-auto">
+        <div style="width:15%">
+            <label for="">DATE OF BIRTH</label>
+        </div>
+        <div style="width:25%">
+            <input style="width: 100%;" type="date">
+        </div>
+        <div style="width:7%">
+            <label for=""> AGE</label>
+        </div>
+        <div style="width:13%">
+            <span>12</span>
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 38%;" class="row m-auto">
+            <div style="width:35%">
+                <label for="">ADDRESS</label>
+            </div>
+            <div style="width:65%">
+                <input style="width: 100%;margin-left: 15px;height: 70px;" type="text" placeholder="">
+            </div>
+
+        </div>
+        <div style="width: 31%;" class="row m-auto">
+            <div style="width:35%">
+                <label style="padding-left: 30px;" for="">Country</label>
+            </div>
+            <div style="width:65%">
+                <input style="width: 100%;" type="text" placeholder="">
+            </div>
+            <div style="width:25%">
+                <label style="padding-left: 30px;" for="">City</label>
+            </div>
+            <div style="width:75%">
+                <input style="width: 100%;" type="text" placeholder="">
+            </div>
+        </div>
+        <div style="width: 30%;" class="row m-auto">
+            <div style="width:25%">
+                <label style="padding-left: 20px;" for="">STATE</label>
+            </div>
+            <div style="width:65%">
+                <input style="width: 100%;" type="text" placeholder="">
+            </div>
+            <div style="width:35%">
+                <label style="padding-left: 20px;" for="">PINCODE</label>
+            </div>
+            <div style="width:55%">
+                <input style="width: 100%;" type="text" placeholder="">
+            </div>
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>CONTACT NUMBER</label>
+        </div>
+        <div style="width:37%">
+            <input style="width: 100%;" type="text" placeholder="+91 9848367541">
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>EMAIL</label>
+        </div>
+        <div style="width:37%">
+            <input style="width: 100%;" type="email" placeholder="swecha@gmail.com">
+        </div>
+    </div>
+    <br>
+    <div style="width: 96%;" class="m-auto">
+        <table style="width: 100%;">
+            <tr style="background-color: rgb(248, 248, 252);font-weight: bold;">
+                <td style="padding: 7px 10px;">NAME</td>
+                <td>ID NUMBER</td>
+                <td>GENDER</td>
+                <td>DATE OF BIRTH</td>
+                <td>RELATIONSHIP</td>
+                <td>OCCUPATION</td>
+            </tr>
+            <tr class="showDataTableTr">
+                <td style="width: 20%;">Prasad</td>
+                <td>1234 7652 2930</td>
+                <td>Male</td>
+                <td>27/10/1991</td>
+                <td>Father</td>
+                <td>Self Employed</td>
+            </tr>
+        </table>
+        <p style="color: #0275d8;font-weight: 700;font-size: 12px;padding-left: 5px;">+ Add Family Member</p>
+    </div>
+</div>
+<br>
+<button class="btn greenBtn" style="float: right;">Add Employee</button>
+<p style="clear: both;"></p>
+
+{%endblock%}

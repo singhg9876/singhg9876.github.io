@@ -1,0 +1,71 @@
+{% extends './master_template_crm.html' %}
+{%load static%}
+{% block title%}
+Admin
+{%endblock%}
+{% block content%}
+<p class="topHeading" style="margin-bottom: 20px;">Users</p>
+<div class="rightInnerDiv m-auto" style="width: 100%;">
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>NAME</label>
+        </div>
+        <div style="width:82%">
+            <input style="width: 100%;" type="text" placeholder="Dr. Prasad">
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width:15%">
+            <label for="">MOBILE NO</label>
+        </div>
+        <div style="width:25%">
+            <input style="width: 100%;" type="text" placeholder="">
+        </div>
+        <div style="width:10%">
+            <label for=""> EMAIL</label>
+        </div>
+        <div style="width:47%">
+            <input style="width: 100%;" type="email" placeholder="">
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>USERNAME</label>
+        </div>
+        <div style="width:82%">
+            <input style="width: 100%;" type="text" placeholder="Seshu345">
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>PASSWORD</label>
+        </div>
+        <div style="width:82%">
+            <input style="width: 100%;" type="password" placeholder="********">
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 18%;">
+            <label>RE-ENTER PASSWORD</label>
+        </div>
+        <div style="width:79%">
+            <input style="width: 100%;" type="password" placeholder="********">
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div style="width: 15%;">
+            <label>ROLE</label>
+        </div>
+        <div style="width:82%">
+            <input style="width: 100%;" type="text" placeholder="Coordinator">
+        </div>
+    </div>
+
+
+
+</div>
+<br>
+<button class="btn greenBtn" style="float: right;">Add</button>
+<p style="clear: both;"></p>
+
+{%endblock%}

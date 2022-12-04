@@ -1,0 +1,110 @@
+{% extends './master_template_crm.html' %}
+{%load static%}
+{% block title%}
+Admin
+{%endblock%}
+{% block content%}
+{% block meta%}
+<!-- datatable -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="application/javascript"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js">
+{%endblock%}
+<style>
+    /* admin page */
+    .addButton {
+        background-color: white;
+        margin: 20px 10px 20px 10px;
+        border: 1px solid rgb(237, 237, 253);
+    }
+
+    .plusIcon {
+        font-size: 24px;
+        padding-right: 10px;
+    }
+</style>
+<div class="row m-auto" style="width: 100%;">
+    <div style="width: 84%;">
+        <p class="topHeading" style="margin-bottom: 20px;">Doctors</p>
+    </div>
+
+    <a href="/addDoctor"><button style="float: right;" class="btn addButton"><span class="plusIcon">+</span>Add
+            Doctor</button></a>
+    <span style="clear: both;"></span>
+</div>
+
+<div class="rightInnerDiv m-auto" style="width: 100%;">
+    <table id="freeuser" class="table no-border" style="width:100%">
+        <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>DOCTOR ID</th>
+                <th>DOCTOR NAME</th>
+                <th>CATEGORY</th>
+                <th>HOSPITAL</th>
+                <th>YEAR OF EXP.</th>
+                <th>EDIT</th>
+                <th>DETAILS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doctor in doctors %}
+            <tr class="tabRw">
+                <td><input type="checkbox"></td>
+                <td>{{doctor.doctor_id}}</td>
+                <td>{{doctor.doctor_name}}</td>
+                <td>{{doctor.department}}</td>
+                <td>{{doctor.hospital}}</td>
+                <td>{{doctor.years_of_exp}}</td>
+                <td></td>
+                <!-- <button class="btn blueBtnTbl">Edit</button> -->
+                <td></td>
+                <!-- <button class="btn greenBtnTbl">Details</button> -->
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</div>
+<script>
+    $(document).ready(function () {
+        var freeTable = $('#freeuser').DataTable({
+            "columnDefs": [
+                {
+                    "targets": -2,
+                    "data": null,
+                    "defaultContent": "<button class='btn blueBtnTbl' type='save'>Edit</button>"
+                },
+                {
+                    "targets": -1,
+                    "data": null,
+                    "defaultContent": "<button class='btn greenBtnTbl' type='saveCertificate'>Details</button>"
+                },
+            ]
+        })
+
+        $('#freeuser tbody').on('click', 'button', function (element) {
+            let row = freeTable.row($(this).parents('tr'));
+            let data = row.data();
+            const status = data[8]
+            if ($(element.currentTarget).attr('type') === 'save') {
+                window.open("doctorEdit/" + data[1])
+                return;
+            }
+            if ($(element.currentTarget).attr('type') === 'saveCertificate') {
+                window.open("gcci?id=" + data[1])
+                return;
+            }
+        });
+    })
+    function createUrl() {
+        let cName = $("input[name=college]").val()
+        let internId = $("input[name=internId]").val()
+
+        let url = '{% url "page_search" %}'
+        console.log('url  ', url, $.param({ 'college': cName, 'internId': internId }));
+        console.log(url + "?" + $.param({ 'college': cName, 'internId': internId }));
+        return url + "?" + $.param({ 'college': cName, 'internId': internId })
+    }
+</script>
+{%endblock%}

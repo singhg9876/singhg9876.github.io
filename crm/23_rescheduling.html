@@ -1,0 +1,73 @@
+{% extends './master_template_crm.html' %}
+{%load static%}
+{% block title%}
+Admin
+{%endblock%}
+{% block content%}
+<div class="rightInnerDiv m-auto" style="width: 100%;">
+    <p class="subHeadingRightInnerDiv">Reschedule</p>
+    <br>
+    <div class="row m-auto">
+        <div style="width: 40%;">
+            <div class="row m-auto">
+                <div style="width: 30%;">
+                    <label>CAMP ID</label>
+                </div>
+                <div style="width:70%">
+                    <span>0011</span>
+                </div>
+            </div>
+            <div class="row m-auto">
+                <div style="width: 30%;">
+                    <label>SCHOOL</label>
+                </div>
+                <div style="width:70%">
+                    <span>Secunderabad Public School</span>
+                </div>
+            </div>
+            <div class="row m-auto">
+                <div style="width: 30%;">
+                    <label>DATE</label>
+                </div>
+                <div style="width:70%">
+                    <input style="width: 85%;" type="date" >
+                </div>
+            </div>
+
+        </div>
+        <div style="width: 60%;">
+            <div class="row m-auto">
+                <div style="width: 30%;">
+                    <label>DOCTOR</label>
+                </div>
+                <div style="width:70%">
+                    <span>0011</span>
+                </div>
+            </div>
+            <div class="row m-auto">
+                <div style="width: 30%;">
+                    <label>SCHOOL ADDRESS</label>
+                </div>
+                <div style="width:70%">
+                    <span>Secunderabad Public School</span>
+                </div>
+            </div>
+            <div class="row m-auto">
+                <div style="width: 30%;">
+                    <label>TIME</label>
+                </div>
+                <div style="width:70%">
+                    <input style="width: 60%;" type="text" placeholder="09:00 AM" >
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div style="text-align: center;">
+    <button style="margin-right: 15px;" class="btn greenBtn">Send it for approval</button>
+    <button class="btn blackBtn">Cancel</button>
+</div>
+<p style="clear: both;"></p>
+
+{%endblock%}

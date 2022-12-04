@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="./static/images/favicon.png" type="image" sizes="50x50">
+    <title>camps </title>
+    <meta name="google-site-verification" content="2Cu8jXdfWcEF68OyIWJmyTkAyoVKjqDWbhAG5bfOHBw" />
+    <!-- Bootstrap CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/stylemedia.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/animate.css" rel="stylesheet">
+    <link href="static/css/animations.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .topmenufooter {
+            background-color: #e3e9f1 !important;
+            padding: 18px;
+        }
+
+        .rac1 {
+            right: 81px;
+            top: 10px;
+            border-radius: 30px;
+            background-image: -moz-linear-gradient(-68deg, rgb(0, 54, 121) 7%, rgb(1, 80, 178) 100%);
+            background-image: -webkit-linear-gradient(-68deg, rgb(0, 54, 121) 7%, rgb(1, 80, 178) 100%);
+            background-image: -ms-linear-gradient(-68deg, rgb(0, 54, 121) 7%, rgb(1, 80, 178) 100%);
+            color: white;
+            padding: 8px 15px 8px 15px;
+            font-size: 13px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="indexheader header float-panel" data-top="0" data-scroll="300">
+        <div class="container-fluid ">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light  well">
+                <a class="navbar-brand" href="index.html"> <img src="static/images/logotop.png" class="img-fluid"
+                        width="100"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="/#">Benifits</a>
+                        </li> -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Medical Camps</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">Contact</a>
+                        </li>
+                        <li class="nav-item"> <a href="/adminPage"> <button class="btn btn-primary wow rac zoomIn">LOGIN
+                                    /
+                                    REGISTER</button></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+        </div>
+    </div>
+ 
+    <style>
+      .modal1 {
+         display: none;
+         position: fixed;
+         z-index: 1;
+         padding-top: 100px;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         overflow: auto;
+         backdrop-filter: blur(5px);
+      }
+   
+      .prev,
+      .next {
+         cursor: pointer;
+         position: absolute;
+         top: 50%;
+         width: auto;
+         padding: 16px;
+         margin-top: -50px;
+         color: white;
+         font-weight: bold;
+         font-size: 20px;
+         transition: 0.6s ease;
+         border-radius: 0 3px 3px 0;
+         user-select: none;
+   
+         color: #000000 !important;
+         -webkit-user-select: none;
+      }
+   
+      .next {
+         right: 0;
+         border-radius: 3px 0 0 3px;
+      }
+   
+      .modal-content1 {
+         position: relative;
+         margin: auto;
+         padding: 0;
+         width: 35%;
+         margin-top: 100px;
+         /* max-width: 1200px; */
+         height: auto;
+      }
+   
+      .modal-content {
+   
+         background-color: transparent;
+         border: none;
+      }
+   
+      .close {
+         float: right;
+         text-align: right;
+         font-size: 2.5rem;
+         font-weight: 700;
+         line-height: 1;
+         color: #000;
+         text-shadow: 0 1px 0 #fff;
+         opacity: .5;
+      }
+   </style>
+   
+   
+   <div class="bannerinnersec">
+   
+      <img src="static/images/gallerybanner.png" class="img-fluid" style="width:100%;">
+   
+   </div>
+   
+   <div class="topinnersec">
+      <div class="mission top">
+         <div class="container">
+   
+            <div class="row">
+   
+   
+               <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img -->
+   
+   
+               <div class="col-md-4 text-center">
+                  <img src="static/images/Event1.png" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.1s" onclick="openModal();currentSlide(1)">
+               </div>
+   
+               <div class="col-md-4 text-center">
+                  <img src="static/images/Event2.png" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.2s" onclick="openModal();currentSlide(2)">
+               </div>
+   
+               <div class="col-md-4 text-center">
+                  <img src="static/images/Event3.png" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.3s" onclick="openModal();currentSlide(3)">
+               </div>
+   
+               <div class="col-md-4 text-center">
+                  <img src="static/images/Event4.png" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.4s" onclick="openModal();currentSlide(4)">
+               </div>
+   
+               <div class="col-md-4 text-center">
+                  <img src="static/images/Event11.png" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.5s" onclick="openModal();currentSlide(5)">
+               </div>
+   
+               <div class="col-md-4 text-center">
+                  <img src="static/images/Event5.png" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.5s" onclick="openModal();currentSlide(5)">
+               </div>
+   
+               <div class="col-md-4 text-center">
+                  <img src="static/images/Event6.png" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.6s" onclick="openModal();currentSlide(6)">
+               </div>
+               <div class="col-md-4 text-center">
+                  <img src="static/images/Event7.png" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.7s" onclick="openModal();currentSlide(7)">
+               </div>
+               <div class="col-md-4 text-center">
+                  <img src="{%static 'images/Event8.png'%}" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.8s" onclick="openModal();currentSlide(8)">
+               </div>
+               <div class="col-md-4 text-center">
+                  <img src="{%static 'images/Event9.png'%}" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.9s" onclick="openModal();currentSlide(9)">
+               </div>
+               <div class="col-md-4 text-center">
+                  <img src="{%static 'images/Event10.png'%}" class="img-fluid gimg wow zoomIn" data-wow-duration="1s"
+                     data-wow-delay="0.10s" onclick="openModal();currentSlide(10)">
+               </div>
+   
+   
+   
+            </div>
+   
+   
+   
+         </div>
+      </div>
+   </div>
+   
+   
+   <div id="myModal" class="modal modal1 ">
+   
+      <div class="modal-content modal-content1">
+         <span class="close close1  cursor" onclick="closeModal()">&times;</span>
+         <div class="mySlides">
+   
+            <img src="static/images/Event1.png" width="100%">
+         </div>
+         <div class="mySlides">
+   
+            <img src="static/images/Event2.png" width="100%">
+         </div>
+         <div class="mySlides">
+   
+            <img src="static/images/Event3.png" width="100%">
+         </div>
+   
+         <div class="mySlides">
+   
+            <img src="static/images/Event4.png" width="100%">
+         </div>
+   
+         <div class="mySlides">
+   
+            <img src="static/images/Event11.png" width="100%">
+         </div>
+   
+         <div class="mySlides">
+   
+            <img src="static/images/Event5.png" width="100%">
+         </div>
+   
+         <div class="mySlides">
+   
+            <img src="static/images/Event6.png" width="100%">
+         </div>
+         <div class="mySlides">
+   
+            <img src="static/images/Event7.png" width="100%">
+         </div>
+         <div class="mySlides">
+   
+            <img src="static/images/Event8.png" width="100%">
+         </div>
+         <div class="mySlides">
+   
+            <img src="static/images/Event9.png" width="100%">
+         </div>
+         <div class="mySlides">
+   
+            <img src="static/images/Event10.png" width="100%">
+         </div>
+   
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+   
+         <div class="caption-container">
+            <p id="caption"></p>
+         </div>
+   
+      </div>
+   </div>
+   <br>
+   
+
+    <!--Footer-->
+    <div class="topmenufooter">
+
+    </div>
+
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-md-3 offset-md-1 col-6 offset-0">
+                    <img src="static/images/logo.png" class="img-fluid" width="100" style="background-color: white;
+    padding: 20px;">
+                    <ul class="addressfooter  menufooter" id="" style="display:block">
+                        <li>
+                            <a href="static/about-us">
+                                <p>About us</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="static/medical-camps">
+                                <p>Medical Campus</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="static/contact">
+                                <p>Contact</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3  leftm col-6 offset-0 offset-md-0 text-center  order2  text-center mt-2">
+
+                    <div class="row well d-block d-sm-none">
+                        <div class="col-md-2 offset-md-3 col-5 offset-2">
+                            <img src="static/images/c3.png" class="img-fluid">
+                        </div>
+                        <div class="col-md-2 offset-md-3 col-5">
+                            <img src="static/images/c2.png" class="img-fluid">
+                        </div>
+                    </div>
+
+
+                    <div class="row well d-none d-sm-block">
+                        <div class="col-md-2 offset-md-3 wow zoomIn">
+                            <img src="static/images/c3.png" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 text-left pfooter d-none d-sm-block">
+                            Call us today<br>+91 9999999999
+                        </div>
+                    </div>
+                    <div class="row well mt-2 d-none d-sm-block">
+                        <div class="col-md-2 offset-md-3 wow zoomIn">
+                            <img src="static/images/c2.png" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 text-left pfooter d-none d-sm-block">
+                            Send us a message<br>
+                            info@prohealth.com
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 offset-md-1   mr-auto col-12 offset-0 order11 text-center">
+                    <div class="row text-left">
+                        <div class="col-md-12 offset-md-0">
+                            <h4 class="h4footer"><b>Disclaimer</b></h4>
+                            <p class="pfooter">
+                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                eu fugiat nulla pariatur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-md-12 text-center">
+                    <ul class="list-inline social_ul footer_ul">
+                        <li><a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <br>
+                    <h6 class="cpy">Copyright © 2022</h6>
+                    </a>
+                </div>
+
+            </div>
+            <!-- Optional JavaScript -->
+            <script src="static/js/jquery.min.js"></script>
+            <script src="static/js/bootstrap.min.js"></script>
+            <script src="static/js/owl.carousel.js"></script>
+            <script src="static/js/jquery.isonscreen.min'%}"></script>
+            <script src="static/js/wow.min.js"></script>
+            <script>
+                new WOW().init();
+                $('.dropdown').each(function () {
+                    var $dropdown = $(this);
+
+                    $(".dropdown-link", $dropdown).click(function (e) {
+                        e.preventDefault();
+                        $div = $("div.dropdown-container", $dropdown);
+
+                        $div.toggle();
+                        $("div.dropdown-container").not($div).hide();
+                        return false;
+                    });
+
+                });
+
+                function blockSpecialChar(e) {
+                    var k = e.keyCode;
+                    return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 32 || (k >= 1 && k <= 2));
+                }
+
+
+                function blockSpecialNumber(e) {
+                    var fcontact = $('.number').val();
+                    if (fcontact.length > 9) {
+                        return false;
+                    }
+                    var k = e.keyCode;
+                    return (k >= 48 && k <= 57);
+                }
+
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+
+                function chk_validations(form) {
+                    var name = $(form + ' .name').val();
+                    var fcontact = $(form + ' .number').val();
+                    if (name.length == '') {
+                        $(form + ' .error').html("Please Enter your  Name");
+                        return false;
+                    }
+
+                    if (fcontact.length < 10 || fcontact.length > 11) {
+                        $(form + ' .error').html("Please Enter Valid Contact Number");
+                        return false;
+                    } else
+                        return true;
+                }
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                function save_details(d) {
+                    event.preventDefault();
+                    var form = d;
+                    if (chk_validations(form)) {
+                        var myData = $(d).serialize();
+                        console.log(myData);
+                        $.ajax({
+                            type: "POST",
+                            url: "savedata",
+                            data: myData,
+                            cache: false,
+                            success: function (data) {
+                                $(form)[0].reset();
+                                window.location.replace("#");
+                            }
+                        });
+                    }
+                }
+
+                function save_detailscontact(d) {
+                    event.preventDefault();
+                    var form = d;
+                    if (chk_validations(form)) {
+                        var myData = $(d).serialize();
+                        console.log(myData);
+                        $.ajax({
+                            type: "POST",
+                            url: "savedatacontact",
+                            data: myData,
+                            cache: false,
+                            success: function (data) {
+                                $(form)[0].reset();
+                                $(form + ' .error').html("“Thank you!! We will get back to you soon.”");
+                            }
+                        });
+                    }
+                }
+
+
+            </script>
+            <script>
+               function openModal() {
+                  document.getElementById("myModal").style.display = "block";
+               }
+            
+               function closeModal() {
+                  document.getElementById("myModal").style.display = "none";
+               }
+            
+               var slideIndex = 1;
+               showSlides(slideIndex);
+            
+               function plusSlides(n) {
+                  showSlides(slideIndex += n);
+               }
+            
+               function currentSlide(n) {
+                  showSlides(slideIndex = n);
+               }
+            
+               function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("demo");
+                  var captionText = document.getElementById("caption");
+                  if (n > slides.length) { slideIndex = 1 }
+                  if (n < 1) { slideIndex = slides.length }
+                  for (i = 0; i < slides.length; i++) {
+                     slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                     dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex - 1].style.display = "block";
+                  dots[slideIndex - 1].className += " active";
+                  captionText.innerHTML = dots[slideIndex - 1].alt;
+               }
+            </script>
+            
+</body>
+
+</html>
